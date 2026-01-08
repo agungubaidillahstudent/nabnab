@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulang Tahun ke-21 Putri Nabila</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header dengan nama dan ucapan -->
+      <header>
+        <h1 class="title">Selamat Ulang Tahun</h1>
+        <div class="birthday-girl">
+          <div class="name-circle">
+            <h2>Putri Nabila</h2>
+            <p class="age">21 Tahun</p>
+          </div>
+        </div>
+        <p class="subtitle">Hari spesial untuk seseorang yang luar biasa</p>
+      </header>
+
+      <!-- Kontrol musik -->
+      <div class="music-player">
+        <h3><i class="fas fa-music"></i> Lagu Ulang Tahun</h3>
+        <div class="player-controls">
+          <button id="playBtn" class="music-btn">
+            <i class="fas fa-play"></i> Putar
+          </button>
+          <button id="pauseBtn" class="music-btn">
+            <i class="fas fa-pause"></i> Jeda
+          </button>
+          <button id="stopBtn" class="music-btn">
+            <i class="fas fa-stop"></i> Berhenti
+          </button>
+          <button id="volumeUpBtn" class="music-btn">
+            <i class="fas fa-volume-up"></i> Keras
+          </button>
+          <button id="volumeDownBtn" class="music-btn">
+            <i class="fas fa-volume-down"></i> Pelan
+          </button>
+        </div>
+        <div class="volume-control">
+          <span class="volume-label"><i class="fas fa-volume-low"></i></span>
+          <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.7"
+          />
+          <span class="volume-label"><i class="fas fa-volume-high"></i></span>
+        </div>
+        <p class="music-status" id="musicStatus">Lagu siap diputar</p>
+        <audio id="birthdaySong" loop>
+          <source src="ultahsong.mp3" type="audio/mpeg" />
+          Browser Anda tidak mendukung elemen audio.
+        </audio>
+      </div>
+
+      <!-- Bagian hadiah -->
+      <section class="gift-section">
+        <h2><i class="fas fa-gift"></i> Hadiah Spesial</h2>
+        <p>
+          Klik kado di bawah untuk membuka hadiah spesial untuk Putri Nabila!
+        </p>
+
+        <div class="gift-container">
+          <div class="gift-box" id="giftBox">
+            <div class="gift-lid"></div>
+            <div class="gift-body">
+              <div class="ribbon-vertical"></div>
+              <div class="ribbon-horizontal"></div>
+            </div>
+            <div class="gift-label">Klik Saya!</div>
+          </div>
+
+          <!-- Foto hadiah (tersembunyi sampai kado dibuka) -->
+          <div class="gift-content" id="giftContent">
+            <div class="photo-frame">
+              <div class="photo-content">
+                <div class="flying-effect">
+                  <div class="nabila-photo">
+                    <img src="nab.png" alt="Putri Nabila" class="real-photo" />
+                    <div class="photo-placeholder">
+                      <i class="fas fa-camera"></i>
+                      <p>Foto Putri Nabila</p>
+                    </div>
+                  </div>
+                  <div class="balloons">
+                    <div class="balloon balloon1"></div>
+                    <div class="balloon balloon2"></div>
+                    <div class="balloon balloon3"></div>
+                  </div>
+                </div>
+                <div class="gift-underneath">
+                  <div class="gift-pile">
+                    <div class="gift-small gift1"></div>
+                    <div class="gift-small gift2"></div>
+                    <div class="gift-small gift3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-caption">
+                <h3>Putri Nabila Terbang di Atas Kado!</h3>
+                <p>
+                  Menggapai mimpi setinggi langit di usia ke-21 yang penuh
+                  berkah
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeri foto -->
+      <section class="gallery-section">
+        <h2><i class="fas fa-images"></i> Galeri Foto Kenangan</h2>
+        <p class="section-subtitle">Klik pada foto untuk melihat lebih besar</p>
+
+        <div class="gallery">
+          <div class="gallery-item" data-id="1">
+            <div class="photo-container">
+              <div class="photo-img">
+                <!-- FOTO 1: Perayaan Ulang Tahun -->
+                <img src="nab.png" alt="Perayaan Ulang Tahun" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #ffb6c1, #ffccd5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-birthday-cake"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+          <div class="gallery-item" data-id="2">
+            <div class="photo-container">
+              <div class="photo-img">
+                <img src="nab.png" alt="Moment Bahagia" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #a7c7e7, #c1d5f0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-smile-beam"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+          <div class="gallery-item" data-id="3">
+            <div class="photo-container">
+              <div class="photo-img">
+                <!-- FOTO 3: Bersama Teman -->
+                <img src="nab2.png" alt="Bersama Teman" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #c9e4c5, #d8f3dc);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+          <div class="gallery-item" data-id="4">
+            <div class="photo-container">
+              <div class="photo-img">
+                <!-- FOTO 4: Prestasi -->
+                <img src="nab2.png" alt="Prestasi" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #ffd6a5, #ffecd1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+          <div class="gallery-item" data-id="5">
+            <div class="photo-container">
+              <div class="photo-img">
+                <!-- FOTO 5: Momen Spesial -->
+                <img src="nab.png" alt="Momen Spesial" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #cdb4db, #e0c3fc);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+          <div class="gallery-item" data-id="6">
+            <div class="photo-container">
+              <div class="photo-img">
+                <!-- FOTO 6: Kenangan Indah -->
+                <img src="nab.png" alt="Kenangan Indah" />
+                <div
+                  style="
+                    background: linear-gradient(135deg, #ffafcc, #ffc8dd);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <i class="fas fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <p>FOTO</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal untuk foto -->
+      <div class="modal" id="photoModal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="modal-photo" id="modalPhoto">
+            <!-- Foto akan dimuat di sini oleh JavaScript -->
+          </div>
+          <div class="modal-caption">
+            <h3 id="modalTitle">Foto Putri Nabila</h3>
+            <p id="modalDescription">
+              Ini adalah foto kenangan indah Putri Nabila
+            </p>
+            <div class="modal-nav">
+              <button id="prevPhoto" class="modal-nav-btn">
+                <i class="fas fa-chevron-left"></i> Sebelumnya
+              </button>
+              <button id="nextPhoto" class="modal-nav-btn">
+                Selanjutnya <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pesan ucapan -->
+      <section class="message-section">
+        <h2><i class="fas fa-heart"></i> Ucapan untuk Nabila</h2>
+        <div class="message-card">
+          <p>
+            Selamat ulang tahun yang ke-21, Putri Nabila! Semoga di usia yang
+            sekarang ini, semua impian dan harapanmu menjadi kenyataan. Semoga
+            selalu diberikan kesehatan, kebahagiaan, dan kesuksesan dalam setiap
+            langkah kehidupanmu.
+          </p>
+          <p>
+            Teruslah menjadi pribadi yang ceria, baik hati, dan penuh inspirasi
+            bagi orang-orang di sekitarmu. Selamat merayakan hari spesialmu!
+          </p>
+          <div class="signature">Agung Ubaidillah</div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>
+          Dibuat dengan <i class="fas fa-heart"></i> untuk Putri Nabila di ulang
+          tahunnya yang ke-21
+        </p>
+        <p class="footer-date">Hari ini, tanggal yang spesial</p>
+        <div class="birthday-cake">
+          <div class="cake">
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="candle"></div>
+            <div class="flame"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Konfetti effect -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+s
